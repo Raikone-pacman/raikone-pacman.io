@@ -5,19 +5,22 @@ site-modelagem-3d/
 │       │   └── com/
 │       │       └── modelagem3d/
 │       │           ├── servlets/
-│       │           │   ├── PortfolioServlet.java
-│       │           │   └── OrcamentoServlet.java
+│       │           │   ├── SaveModelServlet.java
+│       │           │   ├── LoadModelServlet.java
+│       │           │   └── ProjectServlet.java
 │       │           └── models/
-│       │               └── Projeto3D.java
+│       │               └── Model3D.java
 │       ├── webapp/
 │       │   ├── WEB-INF/
-│       │   │   └── web.xml
 │       │   ├── index.html
 │       │   ├── css/
 │       │   │   └── style.css
 │       │   ├── js/
-│       │   │   └── script.js
-│       │   ├── images/
-│       │   └── jsp/
-│       │       └── portfolio.jsp
+│       │   │   ├── app.js
+│       │   │   ├── editor3d.js
+│       │   │   ├── three.js
+│       │   │   └── controls.js
+│       │   └── lib/
+│       │       ├── three.min.js
+│       │       └── orbitcontrols.js
 └── pom.xml
