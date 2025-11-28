@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GearsBot - Monte Seu Robô</title>
+    <style>
+        body { margin: 0; font-family: Arial; }
+        #container { display: flex; height: 100vh; }
+        #sidebar { width: 300px; background: #2c3e50; color: white; padding: 20px; }
+        #viewport { flex: 1; background: #1a1a1a; }
+        .part-category { margin-bottom: 20px; }
+        .part-item { background: #34495e; padding: 10px; margin: 5px 0; cursor: grab; }
+        .part-item:hover { background: #3498db; }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- Sidebar com peças -->
+        <div id="sidebar">
+            <h2>🔧 Peças do Robô</h2>
+            
+            <div class="part-category">
+                <h3>⚙️ Engrenagens</h3>
+                <div class="part-item" data-type="gear-small">Engrenagem Pequena</div>
+                <div class="part-item" data-type="gear-medium">Engrenagem Média</div>
+                <div class="part-item" data-type="gear-large">Engrenagem Grande</div>
+            </div>
+
+            <div class="part-category">
+                <h3>🔩 Estruturas</h3>
+                <div class="part-item" data-type="base">Base</div>
+                <div class="part-item" data-type="arm">Braço</div>
+                <div class="part-item" data-type="wheel">Roda</div>
+            </div>
+
+            <div class="part-category">
+                <h3>🎯 Motores</h3>
+                <div class="part-item" data-type="motor-simple">Motor Simples</div>
+                <div class="part-item" data-type="motor-advanced">Motor Avançado</div>
+            </div>
+
+            <button onclick="saveRobot()">💾 Salvar Robô</button>
+            <button onclick="testMovement()">▶️ Testar Movimento</button>
+        </div>
+
+        <!-- Área 3D -->
+        <div id="viewport"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/gearsbot.js"></script>
+</body>
+</html>
